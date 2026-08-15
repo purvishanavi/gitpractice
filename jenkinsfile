@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/purvishanavi/gitpractice.git'
+                git branch: 'master',
+                    url: 'https://github.com/purvishanavi/gitpractice.git',
+                    credentialsId: 'purvishanavi'
             }
         }
         stage('Build') {
@@ -23,5 +25,4 @@ pipeline {
         }
     }
 }
-pipeline
- agent only 
+
